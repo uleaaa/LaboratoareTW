@@ -1,149 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Flags</title>
-  <link rel="stylesheet" type="text/css" href="styyle.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Flags</title>
+    <link rel="stylesheet" href="styyle.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="navheader">
-      <div id="flagtxt" class="text">
-        <p id="name">Flag</p>
+    <div class="page">
+        <input type="button" id="reset" value="Reset" onclick="window.location.reload()">
+        <div class="fereastra">
+            <div class="titlu">
+                <p id="labtw">Flags</p>
+            </div>
+            <div class="coloana1">
+                <div class="poza1">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/255px-Flag_of_Italy.svg.png" id="img1" class="img1 active">
+                </div>
+                <div class="check1">
+                    <input data-rgb='4px solid rgb(255, 0, 0, 0)' type="radio" name="part1" value ="Italy" data-value="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/255px-Flag_of_Italy.svg.png" checked>Italy
+                    <input data-rgb='4px solid rgba(255, 0, 0, 0.25)' type="radio" name="part1" value ="Ukraine" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1280px-Flag_of_Ukraine.svg.png" >Ukraine
+                    <input data-rgb='4px solid rgba(255, 0, 0, 0.5)' type="radio" name="part1" value ="Romania" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/2560px-Flag_of_Romania.svg.png">Romania
+                    <input data-rgb='4px solid rgba(255, 0, 0, 0.75)' type="radio" name="part1" value ="Turkey" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png?20210808085121">Turkey
+                    <input data-rgb='4px solid rgba(255, 0, 0, 5)' type="radio" name="part1" value ="Austria" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1024px-Flag_of_Austria.svg.png">Austria
+                </div>
+            </div>
+            <div class="coloana2">
+                <div class="poza2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/2560px-Flag_of_Hungary.svg.png" id="img2" class="img2 active">
+                </div>
+                <div class="check2">
+                    <input data-rgb='4px solid rgba(0, 255, 0, 0)' type="radio" name="part2" value ="Hungary" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/2560px-Flag_of_Hungary.svg.png" checked>Hungary
+                    <input data-rgb='4px solid rgba(0, 255, 0, 0.25)' type="radio" name="part2" value ="Liechtenstein" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1280px-Flag_of_Liechtenstein.svg.png">Liechtenstein
+                    <input data-rgb='4px solid rgba(0, 255, 0, 0.5)' type="radio" name="part2" value ="Monaco" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png">Monaco
+                    <input data-rgb='4px solid rgba(0, 255, 0, 0.75)' type="radio" name="part2" value ="France" data-value="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png">France
+                    <input data-rgb='4px solid rgba(0, 255, 0, 1)' type="radio" name="part2" value ="Denmark" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1200px-Flag_of_Denmark.svg.png">Denmark
+                </div>
+            </div>
+            <div class="coloana3">
+                <div class="poza3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Canada_%283-2%29.svg/2560px-Flag_of_Canada_%283-2%29.svg.png" id="img3" class="img3 active">
+                </div>
+                <div class="check3">
+                    <input data-rgb='4px solid rgba(0, 0, 255, 0)' type="radio" name="part3" value ="Canada" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Canada_%283-2%29.svg/2560px-Flag_of_Canada_%283-2%29.svg.png" checked>Canada
+                    <input data-rgb='4px solid rgba(0, 0, 255, 0.25)' type="radio" name="part3" value ="Albania" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/800px-Flag_of_Albania.svg.png?20190303164713">Albania
+                    <input data-rgb='4px solid rgba(0, 0, 255, 0.5)' type="radio" name="part3" value ="Luxembourg" data-value="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/2560px-Flag_of_Luxembourg.svg.png">Luxembourg
+                    <input data-rgb='4px solid rgba(0, 0, 255, 0.75)' type="radio" name="part3" value ="USA" data-value="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png">USA
+                    <input data-rgb='4px solid rgba(0, 0, 255, 1)' type="radio" name="part3" value ="Brazil" data-value="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png">Brazil
+                </div>
+            </div>
+        </div>
     </div>
-      <button id="reset" class="reset" onclick="refresh()">Reset</button>
-    </div>
-      <div class="container1">
-        <div id="c2" class="container2">
-          <div class="info" id="txt">
-            <h3>Loading error</h3>
-          </div>
-            <img id="italyflag" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg"
-                 alt="Loading error" style="display: none">
-            <img id="ukraineflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/800px-Flag_of_Ukraine.svg.png"
-                alt="Loading error" style="display: none">
-            <img id="romaniaflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/2560px-Flag_of_Romania.svg.png"
-                alt="Loading error" style="display: none">
-            <img id="turkeyflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/2560px-Flag_of_Turkey.svg.png"
-                alt="Loading error" style="display: none">
-            <img id="austriaflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1280px-Flag_of_Austria.svg.png"
-                 alt="Loading error" style="display: none">
-        </div>
-
-          <div class="option1">
-          <form action="">
-            <label class="radio">
-              <input type="radio" id="italy" name="radio" onclick="showimage()">
-              <span>Italy</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="ukraine" name="radio" onclick="showimage1()">
-              <span>Ukraine</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="romania" name="radio" onclick="showimage2()">
-              <span>Romania</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="turkey" name="radio" onclick="showimage3()">
-              <span>Turkey</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="austria" name="radio" onclick="showimage4()">
-              <span>Austria</span>
-            </label>
-          </form>
-      </div>
-
-        <div  id="c3" class="container3">
-          <div class="info" id="txt1">
-            <h3>Loading error</h3>
-          </div>
-          <div class="image">
-            <img id="hungaryflag" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg"
-                 alt="Loading error" style="display: none">
-            <img id="liechtensteinflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1280px-Flag_of_Liechtenstein.svg.png"
-                 alt="Loading error" style="display: none">
-            <img id="monacoflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png"
-                  alt="Loading error" style="display: none">
-            <img id="franceflag" src="https://worldpopulationreview.com/s3_files/images/flag-pages/svg/fr.svg"
-                 alt="Loading error" style="display: none">
-            <img id="denmarkflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1200px-Flag_of_Denmark.svg.png"
-                 alt="Loading error" style="display: none">
-          </div>
-        </div>
-
-<div class="option2">
-          <form action="">
-            <label class="radio">
-              <input type="radio" id="hungary" name="radio" onclick="showimage5()">
-              <span>Hungary</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="liechtenstein" name="radio" onclick="showimage6()">
-              <span>Liechtenstein</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="monaco" name="radio" onclick="showimage7()">
-              <span>Monaco</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="france" name="radio" onclick="showimage8()">
-              <span>France</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="denmark" name="radio" onclick="showimage9()">
-              <span>Denmark</span>
-            </label>
-          </form>
-        </div>
-
-        <div id="c4" class="container4">
-          <div class="info" id="txt2">
-            <h3>Loading error</h3>
-          </div>
-          <div class="image">
-            <img id="canadaflag" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg"
-                 alt="Loading error" style="display: none">
-            <img id="albaniaflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/800px-Flag_of_Albania.svg.png?20190303164713"
-                 alt="Loading error" style="display: none">
-            <img id="luxembourgflag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/2560px-Flag_of_Luxembourg.svg.png"
-                 alt="Loading error" style="display: none">
-            <img id="usaflag" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
-                 alt="Loading error" style="display: none">
-            <img id="brazilflag" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png"
-                 alt="Loading error" style="display: none">
-          </div>
-        </div>
-        <div class="option3">
-          <form action="">
-            <label class="radio">
-              <input type="radio" id="canada" name="radio" onclick="showimage10()">
-              <span>Canada</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="albania" name="radio" onclick="showimage11()">
-              <span>Albania</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="luxembourg" name="radio" onclick="showimage12()">
-              <span>Luxembourg</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="usa" name="radio" onclick="showimage13()">
-              <span>USA</span>
-            </label>
-            <label class="radio">
-              <input type="radio" id="brazil" name="radio" onclick="showimage14()">
-              <span>Brazil</span>
-            </label>
-          </form>
-        </div>
-
-      </div>
-  </div>
-
-
-<script src="index.js"></script>
 </body>
+<script src="index.js"></script>
 </html>

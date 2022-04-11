@@ -1,200 +1,60 @@
-function showimage() {
-    document.getElementById('txt').style.display="none"
-    document.getElementById('italyflag').style.display="block"
-    document.getElementById('ukraineflag').style.display="none"
-    document.getElementById('romaniaflag').style.display="none"
-    document.getElementById('turkeyflag').style.display="none"
-    document.getElementById('austriaflag').style.display="none"
-    document.getElementById('name').innerText="Italy"
-    document.getElementById('c2').style.borderBlockEndWidth="8px"
-    document.getElementById('c2').style.borderColor="rgb(260,0,0)"
-    document.getElementById('c3').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage1() {
-    document.getElementById('txt').style.display="none"
-    document.getElementById('italyflag').style.display="none"
-    document.getElementById('ukraineflag').style.display="block"
-    document.getElementById('romaniaflag').style.display="none"
-    document.getElementById('turkeyflag').style.display="none"
-    document.getElementById('austriaflag').style.display="none"
-    document.getElementById('name').innerText="Ukraine"
-    document.getElementById('c2').style.borderBlockEndWidth="8px"
-    document.getElementById('c2').style.borderColor="rgb(220,0,0)"
-    document.getElementById('c3').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage2() {
-    document.getElementById('txt').style.display="none"
-    document.getElementById('italyflag').style.display="none"
-    document.getElementById('ukraineflag').style.display="none"
-    document.getElementById('romaniaflag').style.display="block"
-    document.getElementById('turkeyflag').style.display="none"
-    document.getElementById('austriaflag').style.display="none"
-    document.getElementById('name').innerText="Romania"
-    document.getElementById('c2').style.borderBlockEndWidth="8px"
-    document.getElementById('c2').style.borderColor="rgb(180,0,0)"
-    document.getElementById('c3').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage3() {
-    document.getElementById('txt').style.display="none"
-    document.getElementById('italyflag').style.display="none"
-    document.getElementById('ukraineflag').style.display="none"
-    document.getElementById('romaniaflag').style.display="none"
-    document.getElementById('turkeyflag').style.display="block"
-    document.getElementById('austriaflag').style.display="none"
-    document.getElementById('name').innerText="Turkey"
-    document.getElementById('c2').style.borderBlockEndWidth="8px"
-    document.getElementById('c2').style.borderColor="rgb(140,0,0)"
-    document.getElementById('c3').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage4() {
-    document.getElementById('txt').style.display="none"
-    document.getElementById('italyflag').style.display="none"
-    document.getElementById('ukraineflag').style.display="none"
-    document.getElementById('romaniaflag').style.display="none"
-    document.getElementById('turkeyflag').style.display="none"
-    document.getElementById('austriaflag').style.display="block"
-    document.getElementById('name').innerText="Austria"
-    document.getElementById('c2').style.borderBlockEndWidth="8px"
-    document.getElementById('c2').style.borderColor="rgb(100,0,0)"
-    document.getElementById('c3').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage5() {
-    document.getElementById('txt1').style.display = "none"
-    document.getElementById('hungaryflag').style.display = "block"
-    document.getElementById('liechtensteinflag').style.display = "none"
-    document.getElementById('monacoflag').style.display = "none"
-    document.getElementById('franceflag').style.display = "none"
-    document.getElementById('denmarkflag').style.display = "none"
-    document.getElementById('name').innerText="Hungary"
-    document.getElementById('c3').style.borderBlockE
+let result = document.getElementById("labtw");
 
-ndWidth="8px"
-    document.getElementById('c3').style.borderColor="rgb(260,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
+if (document.querySelector('input[name="part1"]')) {
+    document.querySelectorAll('input[name="part1"]').forEach((elem) => {
+      elem.addEventListener("change", function(event) {
+        var item = event.target.dataset.value;
+        document.querySelector("#img1").setAttribute('src', item)
+        console.log(item);
+        var borderRgb = event.target.dataset.rgb
+        document.querySelector('.coloana1').style.border=borderRgb
+        document.querySelector('.coloana2').style.border='none'
+        document.querySelector('.coloana3').style.border='none'
+        
+      });
+    });
   }
-  function showimage6() {
-    document.getElementById('txt1').style.display = "none"
-    document.getElementById('hungaryflag').style.display = "none"
-    document.getElementById('liechtensteinflag').style.display = "block"
-    document.getElementById('monacoflag').style.display = "none"
-    document.getElementById('franceflag').style.display = "none"
-    document.getElementById('denmarkflag').style.display = "none"
-    document.getElementById('name').innerText="Liectenstein"
-    document.getElementById('c3').style.borderBlockEndWidth="8px"
-    document.getElementById('c3').style.borderColor="rgb(220,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
+
+  if (document.querySelector('input[name="part2"]')) {
+    document.querySelectorAll('input[name="part2"]').forEach((elem) => {
+      elem.addEventListener("change", function(event) {
+        var item = event.target.dataset.value;
+        document.querySelector("#img2").setAttribute('src', item)
+        console.log(item);
+        var borderRgb = event.target.dataset.rgb
+        document.querySelector('.coloana2').style.border=borderRgb
+        document.querySelector('.coloana1').style.border='none'
+        document.querySelector('.coloana3').style.border='none'
+      });
+    });
   }
-  function showimage7() {
-    document.getElementById('txt1').style.display = "none"
-    document.getElementById('hungaryflag').style.display = "none"
-    document.getElementById('liechtensteinflag').style.display = "none"
-    document.getElementById('monacoflag').style.display = "block"
-    document.getElementById('franceflag').style.display = "none"
-    document.getElementById('denmarkflag').style.display = "none"
-    document.getElementById('name').innerText="Monaco"
-    document.getElementById('c3').style.borderBlockEndWidth="8px"
-    document.getElementById('c3').style.borderColor="rgb(180,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
+
+  if (document.querySelector('input[name="part3"]')) {
+    document.querySelectorAll('input[name="part3"]').forEach((elem) => {
+      elem.addEventListener("change", function(event) {
+        var item = event.target.dataset.value;
+        document.querySelector("#img3").setAttribute('src', item)
+        console.log(item);
+        var borderRgb = event.target.dataset.rgb
+        document.querySelector('.coloana3').style.border=borderRgb
+        document.querySelector('.coloana2').style.border='none'
+        document.querySelector('.coloana1').style.border='none'
+      });
+    });
   }
-  function showimage8() {
-    document.getElementById('txt1').style.display = "none"
-    document.getElementById('hungaryflag').style.display = "none"
-    document.getElementById('liechtensteinflag').style.display = "none"
-    document.getElementById('monacoflag').style.display = "none"
-    document.getElementById('franceflag').style.display = "block"
-    document.getElementById('denmarkflag').style.display = "none"
-    document.getElementById('name').innerText="France"
-    document.getElementById('c3').style.borderBlockEndWidth="8px"
-    document.getElementById('c3').style.borderColor="rgb(140,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage9() {
-    document.getElementById('txt1').style.display = "none"
-    document.getElementById('hungaryflag').style.display = "none"
-    document.getElementById('liechtensteinflag').style.display = "none"
-    document.getElementById('monacoflag').style.display = "none"
-    document.getElementById('franceflag').style.display = "none"
-    document.getElementById('denmarkflag').style.display = "block"
-    document.getElementById('name').innerText="Denmark"
-    document.getElementById('c3').style.borderBlockEndWidth="8px"
-    document.getElementById('c3').style.borderColor="rgb(100,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c4').style.borderColor="#626d7e"
-  }
-  function showimage10() {
-    document.getElementById('txt2').style.display = "none"
-    document.getElementById('canadaflag').style.display = "block"
-    document.getElementById('albaniaflag').style.display = "none"
-    document.getElementById('luxembourgflag').style.display = "none"
-    document.getElementById('usaflag').style.display = "none"
-    document.getElementById('brazilflag').style.display = "none"
-    document.getElementById('name').innerText="Canada"
-    document.getElementById('c4').style.borderBlockEndWidth="8px"
-    document.getElementById('c4').style.borderColor="rgb(260,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c3').style.borderColor="#626d7e"
-  }
-  function showimage11() {
-    document.getElementById('txt2').style.display = "none"
-    document.getElementById('canadaflag').style.display = "none"
-    document.getElementById('albaniaflag').style.display = "block"
-    document.getElementById('luxembourgflag').style.display = "none"
-    document.getElementById('usaflag').style.display = "none"
-    document.getElementById('brazilflag').style.display = "none"
-    document.getElementById('name').innerText="Albania"
-    document.getElementById('c4').style.borderBlockEndWidth="8px"
-    document.getElementById('c4').style.borderColor="rgb(220,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c3').style.borderColor="#626d7e"
-  }
-  function showimage12() {
-    document.getElementById('txt2').style.display = "none"
-    document.getElementById('canadaflag').style.display = "none"
-    document.getElementById('albaniaflag').style.display = "none"
-    document.getElementById('luxembourgflag').style.display = "block"
-    document.getElementById('usaflag').style.display = "none"
-    document.getElementById('brazilflag').style.display = "none"
-    document.getElementById('name').innerText="Luxembourg"
-    document.getElementById('c4').style.borderBlockEndWidth="8px"
-    document.getElementById('c4').style.borderColor="rgb(180,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c3').style.borderColor="#626d7e"
-  }
-  function showimage13() {
-    document.getElementById('txt2').style.display = "none"
-    document.getElementById('canadaflag').style.display = "none"
-    document.getElementById('albaniaflag').style.display = "none"
-    document.getElementById('luxembourgflag').style.display = "none"
-    document.getElementById('usaflag').style.display = "block"
-    document.getElementById('brazilflag').style.display = "none"
-    document.getElementById('name').innerText="USA"
-    document.getElementById('c4').style.borderBlockEndWidth="8px"
-    document.getElementById('c4').style.borderColor="rgb(140,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c3').style.borderColor="#626d7e"
-  }
-  function showimage14() {
-    document.getElementById('txt2').style.display = "none"
-    document.getElementById('canadaflag').style.display = "none"
-    document.getElementById('albaniaflag').style.display = "none"
-    document.getElementById('luxembourgflag').style.display = "none"
-    document.getElementById('usaflag').style.display = "none"
-    document.getElementById('brazilflag').style.display = "block"
-    document.getElementById('name').innerText="Brazil"
-    document.getElementById('c4').style.borderBlockEndWidth="8px"
-    document.getElementById('c4').style.borderColor="rgb(100,0,0)"
-    document.getElementById('c2').style.borderColor="#626d7e"
-    document.getElementById('c3').style.borderColor="#626d7e"
-  }
-  function refresh(){
-    window.location.reload();
-  }
+
+    document.querySelector("#img1").addEventListener('click', function (){
+    document.querySelector("#labtw").innerHTML=document.querySelector('input[name="part1"]:checked').value
+  })
+
+    document.querySelector("#img2").addEventListener('click', function (){
+    document.querySelector("#labtw").innerHTML=document.querySelector('input[name="part2"]:checked').value
+  })
+
+    document.querySelector("#img3").addEventListener('click', function (){
+    document.querySelector("#labtw").innerHTML=document.querySelector('input[name="part3"]:checked').value
+  })
+
+  document.querySelector('input[name="part1"]').dispatchEvent( new Event('change'))
+  document.querySelector('input[name="part2"]').dispatchEvent( new Event('change'))
+  document.querySelector('input[name="part3"]').dispatchEvent( new Event('change'))
