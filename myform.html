@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Lora:ital@1&family=Merriweather&display=swap" rel="stylesheet">
+        <title> My Registration Form</title>
+        <link rel="stylesheet" href="basic4.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <h3>Personal Info</h3>
+        <p id="firstname">First name  </p>
+        <p id="lastname">Last name </p>
+        <p id="email">Email  </p>
+        <br id="phone">Phone </p>
+        <p id="city">City  </p>
+        <p id="profession">Profession </p>
+        
+
+        <h3>Social links</h3>
+        <p id="social_links"></p>
+
+        <h3>Education</h3>
+        <p id="edutitle"> Education title   </p>
+        <p id="date">Graduation date   </p>
+        <p id="edutype">Education type  </p>
+        <h3>Job</h3>
+        <p id="job_name">Job name  </p>
+        <p id="start_date">Start date   </p>
+        <p id="end_date">End date  </p>
+        <p id="city_job">City   </p>
+        <p id="company_name">Company name </p>
+        
+        <button type="button" id="collect-button">Collect data</button>
+
+      </div>
+    
+<script>
+
+  const firstname=$("#firstname");
+  const lastname=$("#lastname");
+  const email=$("#email");
+  const phone=$("#phone");
+  const city=$("#city");
+  const profession=$("#profession");
+  const social_links=$("#social_links");
+  const edutitle=$("#edutitle");
+  const date=$("#date");
+  const edutype=$("#edutype");
+  const job_name=$("#job_name");
+  const start_date=$("#start_date");
+  const end_date=$("#end_date");
+  const city_job=$("#city_job");
+  const company_name=$("#company_name");
+
+  function ajaxGetRequest(){
+    $.ajax({
+      url: 'http://localhost:3000/form-data',
+      method: 'GET',
+      dataType: 'json',
+      success: function(response) {
+        console.log('true');
+        firstname.append(`${JSON.stringify(response.firstname)}`);
+        lastname.append(`${JSON.stringify(response.lastname)}`);
+        email.append(`${JSON.stringify(response.email)}`);
+        phone.append(`${JSON.stringify(response.phone)}`);
+        city.append(`${JSON.stringify(response.city)}`);
+        profession.append(`${JSON.stringify(response.profession)}`);
+        social_links.append(`${JSON.stringify(response.social_links)}`);
+        edutitle.append(`${JSON.stringify(response.edutitle)}`);
+        date.append(`${JSON.stringify(response.date)}`);
+        edutype.append(`${JSON.stringify(response.edutype)}`);
+        job_name.append(`${JSON.stringify(response.job_name)}`);
+        start_date.append(`${JSON.stringify(response.start_date)}`);
+        end_date.append(`${JSON.stringify(response.end_date)}`);
+        city_job.append(`${JSON.stringify(response.city_job)}`);
+        company_name.append(`${JSON.stringify(response.company_name)}`);
+      },
+    });
+  }
+
+  $('#collect-button').on('click', () => {
+    ajaxGetRequest()
+  });
+
+</script>
+    </body>
+</html>
+
+
