@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Registration Form</title>
+<link rel='stylesheet' href='basic4.css' type='text/css' />
+</head>
+<body onload="document.registration.userid.focus();">
+<h1>Registration Form</h1>
+<form id="idForm" action="http://localhost:3000/form-data", method="post" target="_self">
+<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="firstname">First Name:</label></li>
+<li><input type="text" name="firstname" size="25" /></li>
+<li><label for="lastname">Last Name:</label></li>
+<li><input type="text" name="lastname" size="25" /></li>
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" size="25" /></li>
+<li><label for="phone">Phone:</label></li>
+<li><input type="text" name="phone" size="25" /></li>
+<li><label for="city">City:</label></li>
+<li><input type="text" name="city" size="25" /></li>
+<li><label for="profession">Profession:</label></li>
+<li><input type="text" name="profession" size="25" /></li>
+<li><label for="edutitle">Education title:</label></li>
+<li><input type="text" name="edutitle" size="25" /></li>
+<li><label for="graduation">Graduation date:</label></li>
+<li><input type="date" name="graduation" /></li>
+<li><label for="edutype">Education type:</label></li>
+<li><select name="edutype">
+    <option selected="" value="Default">Select education type</option>
+    <option value="L">Lyceum</option>
+    <option value="B">Bachelor</option>
+    <option value="S">Superior</option>
+    </select></li>
+    <li><label for="job">Job name:</label></li>
+<li><input type="text" name="job" size="25" /></li>
+<li><label for="startdate">Start date:</label></li>
+<li><input type="date" name="startdate" /></li>
+<li><label for="enddate">End date:</label></li>
+<li><input type="date" name="enddate" /></li>
+<li><label for="city">City:</label></li>
+<li><input type="text" name="city" size="25" /></li>
+<li><label for="company">Company name:</label></li>
+<li><input type="text" name="company" size="25" /></li>
+<li><input type="submit" name="submit" value="Save" /></li>
+</ul>
+</form>
+<script src="script4.js"></script>
+</body>
+</html>
